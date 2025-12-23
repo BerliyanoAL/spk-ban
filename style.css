@@ -1,0 +1,280 @@
+/* assets/css/style.css - VERSI DARK MODE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #161617; /* Warna background utama yang gelap */
+    --card-bg-color: #2d2e2e; /* Warna background kartu konten */
+    --text-color: #e0e0e0; /* Warna teks utama yang terang */
+    --text-muted: #58b1de; /* Warna teks yang lebih redup */
+    --primary-color: #667eea;
+    --secondary-color: #4466ad;
+    --accent-color: #535dc9;
+    --success-color: #06cfa7;
+    --warning-color: #fdcb6e;
+    --danger-color: #d63031;
+    --border-color: #77d1ea; /* Warna border untuk elemen */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Navbar --- */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.nav-logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.nav-item {
+    margin-left: 15px;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 25px 15px;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Main Content --- */
+main {
+    padding: 40px 0;
+}
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    min-height: 70vh;
+}
+
+/* --- Homepage Specific Styles --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.hero h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.card {
+    background: #3a3f47; /* Warna kartu fitur yang sedikit lebih terang */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.card-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+.card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Typography --- */
+h1 { text-align: center; color: var(--text-color); font-weight: 700; margin-bottom: 10px; font-size: 2.5em; }
+h2 { color: var(--text-color); font-weight: 600; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); }
+h3 { color: var(--text-color); }
+
+/* --- Form & Button --- */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-color); }
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 15px;
+    background-color: #3a3f47; /* Background input yang gelap */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color); /* Teks input yang terang */
+    transition: border-color 0.3s ease;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* --- Table --- */
+.search-bar { margin-bottom: 20px; }
+.search-bar input { 
+    width: 100%; 
+    padding: 12px 15px; 
+    background-color: #3a3f47;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    color: var(--text-color);
+}
+.table-wrapper { overflow-x: auto; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+thead th {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    font-weight: 600;
+}
+tbody tr:hover {
+    background-color: #3a3f47; /* Efek hover yang sedikit lebih terang */
+}
+
+/* --- Chart --- */
+.chart-container {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f2f2f3;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #1a1d20; /* Footer yang sedikit lebih gelap dari body */
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Alert --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: var(--danger-color);
+    background-color: #4b2c2c; /* Background alert yang gelap */
+    border: 1px solid var(--danger-color);
+}
+
+/* --- Result Info --- */
+.result-info {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #2a4a3e; /* Background info yang gelap */
+    border-left: 5px solid var(--success-color);
+    border-radius: 8px;
+}
+.result-info h3 { color: var(--success-color); margin-bottom: 15px; }
+
+/* --- Best Recommendation Card --- */
+.best-rec-card {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.best-rec-card h1 { font-size: 3em; color: white; }
+.best-rec-card h2 { font-size: 2.5em; color: white; border: none; }
+.best-rec-card p { font-size: 1.2em; max-width: 800px; margin: 20px auto 0; }
